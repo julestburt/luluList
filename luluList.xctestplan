@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "B8AE6C01-7715-4A98-AED9-E20688CF0623",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:luluList.xcodeproj",
+      "identifier" : "84685E642C50944B003475D9",
+      "name" : "luluList"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:luluList.xcodeproj",
+        "identifier" : "84685E792C50944D003475D9",
+        "name" : "luluListTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:luluList.xcodeproj",
+        "identifier" : "84685E832C50944D003475D9",
+        "name" : "luluListUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

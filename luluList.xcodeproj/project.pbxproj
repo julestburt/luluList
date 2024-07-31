@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844D31D22C55895A0038D8EA /* GarmentCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D12C55895A0038D8EA /* GarmentCoreData.swift */; };
+		844D31D52C594CBF0038D8EA /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D42C594CBF0038D8EA /* Dependencies.swift */; };
 		84685E692C50944B003475D9 /* luluListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E682C50944B003475D9 /* luluListApp.swift */; };
-		84685E6B2C50944B003475D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E6A2C50944B003475D9 /* ContentView.swift */; };
+		84685E6B2C50944B003475D9 /* GarmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E6A2C50944B003475D9 /* GarmentListView.swift */; };
 		84685E6D2C50944D003475D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84685E6C2C50944D003475D9 /* Assets.xcassets */; };
 		84685E702C50944D003475D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84685E6F2C50944D003475D9 /* Preview Assets.xcassets */; };
-		84685E722C50944D003475D9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E712C50944D003475D9 /* Persistence.swift */; };
+		84685E722C50944D003475D9 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E712C50944D003475D9 /* CoreData.swift */; };
 		84685E752C50944D003475D9 /* luluList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84685E732C50944D003475D9 /* luluList.xcdatamodeld */; };
 		84685E7F2C50944D003475D9 /* luluListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E7E2C50944D003475D9 /* luluListTests.swift */; };
 		84685E892C50944D003475D9 /* luluListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E882C50944D003475D9 /* luluListUITests.swift */; };
 		84685E8B2C50944D003475D9 /* luluListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E8A2C50944D003475D9 /* luluListUITestsLaunchTests.swift */; };
+		84685E992C50952B003475D9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 84685E982C50952B003475D9 /* ComposableArchitecture */; };
+		84685E9B2C51F4F0003475D9 /* Garment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E9A2C51F4F0003475D9 /* Garment.swift */; };
+		84685E9D2C51F707003475D9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E9C2C51F707003475D9 /* Environment.swift */; };
+		84685E9F2C520B91003475D9 /* AddGarmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E9E2C520B91003475D9 /* AddGarmentView.swift */; };
+		84685EA12C521A8E003475D9 /* FetchPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685EA02C521A8E003475D9 /* FetchPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,18 +43,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84685E652C50944B003475D9 /* luluList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = luluList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		844D31D12C55895A0038D8EA /* GarmentCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentCoreData.swift; sourceTree = "<group>"; };
+		844D31D32C5617920038D8EA /* luluList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = luluList.xctestplan; sourceTree = "<group>"; };
+		844D31D42C594CBF0038D8EA /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		84685E652C50944B003475D9 /* llList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = llList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84685E682C50944B003475D9 /* luluListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListApp.swift; sourceTree = "<group>"; };
-		84685E6A2C50944B003475D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84685E6A2C50944B003475D9 /* GarmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentListView.swift; sourceTree = "<group>"; };
 		84685E6C2C50944D003475D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84685E6F2C50944D003475D9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		84685E712C50944D003475D9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		84685E712C50944D003475D9 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		84685E742C50944D003475D9 /* luluList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = luluList.xcdatamodel; sourceTree = "<group>"; };
 		84685E7A2C50944D003475D9 /* luluListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = luluListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84685E7E2C50944D003475D9 /* luluListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListTests.swift; sourceTree = "<group>"; };
 		84685E842C50944D003475D9 /* luluListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = luluListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84685E882C50944D003475D9 /* luluListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListUITests.swift; sourceTree = "<group>"; };
 		84685E8A2C50944D003475D9 /* luluListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		84685E9A2C51F4F0003475D9 /* Garment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Garment.swift; sourceTree = "<group>"; };
+		84685E9C2C51F707003475D9 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		84685E9E2C520B91003475D9 /* AddGarmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentView.swift; sourceTree = "<group>"; };
+		84685EA02C521A8E003475D9 /* FetchPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84685E992C50952B003475D9 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +90,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844D31CE2C5358390038D8EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				84685E9A2C51F4F0003475D9 /* Garment.swift */,
+				844D31D12C55895A0038D8EA /* GarmentCoreData.swift */,
+				844D31D42C594CBF0038D8EA /* Dependencies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		844D31CF2C53584B0038D8EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84685E6A2C50944B003475D9 /* GarmentListView.swift */,
+				84685E9E2C520B91003475D9 /* AddGarmentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		844D31D02C53585A0038D8EA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				84685EA02C521A8E003475D9 /* FetchPublisher.swift */,
+				84685E712C50944D003475D9 /* CoreData.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		84685E5C2C50944B003475D9 = {
 			isa = PBXGroup;
 			children = (
+				844D31D32C5617920038D8EA /* luluList.xctestplan */,
 				84685E672C50944B003475D9 /* luluList */,
 				84685E7D2C50944D003475D9 /* luluListTests */,
 				84685E872C50944D003475D9 /* luluListUITests */,
@@ -88,7 +132,7 @@
 		84685E662C50944B003475D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84685E652C50944B003475D9 /* luluList.app */,
+				84685E652C50944B003475D9 /* llList.app */,
 				84685E7A2C50944D003475D9 /* luluListTests.xctest */,
 				84685E842C50944D003475D9 /* luluListUITests.xctest */,
 			);
@@ -99,9 +143,11 @@
 			isa = PBXGroup;
 			children = (
 				84685E682C50944B003475D9 /* luluListApp.swift */,
-				84685E6A2C50944B003475D9 /* ContentView.swift */,
+				84685E9C2C51F707003475D9 /* Environment.swift */,
+				844D31CF2C53584B0038D8EA /* Views */,
+				844D31CE2C5358390038D8EA /* Models */,
+				844D31D02C53585A0038D8EA /* CoreData */,
 				84685E6C2C50944D003475D9 /* Assets.xcassets */,
-				84685E712C50944D003475D9 /* Persistence.swift */,
 				84685E732C50944D003475D9 /* luluList.xcdatamodeld */,
 				84685E6E2C50944D003475D9 /* Preview Content */,
 			);
@@ -136,9 +182,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84685E642C50944B003475D9 /* luluList */ = {
+		84685E642C50944B003475D9 /* llList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84685E8E2C50944D003475D9 /* Build configuration list for PBXNativeTarget "luluList" */;
+			buildConfigurationList = 84685E8E2C50944D003475D9 /* Build configuration list for PBXNativeTarget "llList" */;
 			buildPhases = (
 				84685E612C50944B003475D9 /* Sources */,
 				84685E622C50944B003475D9 /* Frameworks */,
@@ -148,9 +194,12 @@
 			);
 			dependencies = (
 			);
-			name = luluList;
+			name = llList;
+			packageProductDependencies = (
+				84685E982C50952B003475D9 /* ComposableArchitecture */,
+			);
 			productName = luluList;
-			productReference = 84685E652C50944B003475D9 /* luluList.app */;
+			productReference = 84685E652C50944B003475D9 /* llList.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84685E792C50944D003475D9 /* luluListTests */ = {
@@ -221,11 +270,14 @@
 				Base,
 			);
 			mainGroup = 84685E5C2C50944B003475D9;
+			packageReferences = (
+				84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 84685E662C50944B003475D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84685E642C50944B003475D9 /* luluList */,
+				84685E642C50944B003475D9 /* llList */,
 				84685E792C50944D003475D9 /* luluListTests */,
 				84685E832C50944D003475D9 /* luluListUITests */,
 			);
@@ -263,10 +315,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84685E722C50944D003475D9 /* Persistence.swift in Sources */,
-				84685E6B2C50944B003475D9 /* ContentView.swift in Sources */,
+				84685E722C50944D003475D9 /* CoreData.swift in Sources */,
+				84685E9D2C51F707003475D9 /* Environment.swift in Sources */,
+				84685E6B2C50944B003475D9 /* GarmentListView.swift in Sources */,
+				84685E9F2C520B91003475D9 /* AddGarmentView.swift in Sources */,
+				84685E9B2C51F4F0003475D9 /* Garment.swift in Sources */,
+				844D31D22C55895A0038D8EA /* GarmentCoreData.swift in Sources */,
 				84685E692C50944B003475D9 /* luluListApp.swift in Sources */,
 				84685E752C50944D003475D9 /* luluList.xcdatamodeld in Sources */,
+				844D31D52C594CBF0038D8EA /* Dependencies.swift in Sources */,
+				84685EA12C521A8E003475D9 /* FetchPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +350,12 @@
 /* Begin PBXTargetDependency section */
 		84685E7C2C50944D003475D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84685E642C50944B003475D9 /* luluList */;
+			target = 84685E642C50944B003475D9 /* llList */;
 			targetProxy = 84685E7B2C50944D003475D9 /* PBXContainerItemProxy */;
 		};
 		84685E862C50944D003475D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84685E642C50944B003475D9 /* luluList */;
+			target = 84685E642C50944B003475D9 /* llList */;
 			targetProxy = 84685E852C50944D003475D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -438,6 +496,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,6 +526,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,14 +549,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU9YSQ22FQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bethegame.luluListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/luluList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/luluList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/llList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/llList";
 			};
 			name = Debug;
 		};
@@ -509,14 +569,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU9YSQ22FQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bethegame.luluListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/luluList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/luluList";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/llList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/llList";
 			};
 			name = Release;
 		};
@@ -528,6 +588,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU9YSQ22FQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bethegame.luluListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -546,6 +607,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU9YSQ22FQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bethegame.luluListUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -568,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84685E8E2C50944D003475D9 /* Build configuration list for PBXNativeTarget "luluList" */ = {
+		84685E8E2C50944D003475D9 /* Build configuration list for PBXNativeTarget "llList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84685E8F2C50944D003475D9 /* Debug */,
@@ -596,6 +658,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84685E982C50952B003475D9 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		84685E732C50944D003475D9 /* luluList.xcdatamodeld */ = {
