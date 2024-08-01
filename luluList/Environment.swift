@@ -1,9 +1,8 @@
 import UIKit
 import Combine
 
-// Allows for previews / testing to use in memory
-var previews = false
-let coredata = CoreData(inMemory: previews)
+var previewInMemory = false
+let coredata = CoreData(inMemory: previewInMemory)
 
 var Current = Environment(
 	date: { Date() },

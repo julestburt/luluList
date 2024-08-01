@@ -35,7 +35,8 @@ struct GarmentList {
         case delete(UUID)
         case onAppear
         case onDisappear
-		case removeClip(UUID)
+		case remove(UUID)
+		case restore(Garment, Int)
         case task
         case updateItems([Garment])
     }
@@ -47,20 +48,28 @@ struct GarmentList {
     var body: some ReducerOf<Self> {
         BindingReducer()
         Reduce<State, Action> { state, action in
-            switch action {
-                
-            case .addItem:
-                state.destination = .add(AddGarment.State(name: ""))
-                return .none
-                
-			case .delete(let uuid):
-				return .run { send in
-					try garments.delete(uuid)
-				}
-				.concatenate(with: .send(.removeClip(uuid), animation: .default))
+			switch action {
 				
+			case .addItem:
+				state.destination = .add(AddGarment.State(name: ""))
+				return .none
+				
+			case .delete(let uuid):
+				guard let index = state.items.index(id: uuid),
+					  let item = state.items[id: uuid] else { return .none }
+				return 
+					.concatenate(
+					.send(.remove(uuid), animation: .default),
+					.run { send in
+						do {
+							try garments.delete(uuid)
+						} catch {
+							await send(.restore(item, index), animation: .default)
+						}
+					}
+				)
+
             case .onAppear:
-				print("On Appear Started")
                 return .run { _ in
 					garments.start()
                 }
@@ -68,12 +77,15 @@ struct GarmentList {
 			case .onDisappear:
 				return .cancel(id: Cancel.publisher)
 				
-			case .removeClip(let uuid):
+			case .remove(let uuid):
 				state.items.remove(id: uuid)
+				return .none
+				
+			case .restore(let item, let offset):
+				state.items.insert(item, at: offset)
 				return .none
                 
 			case .task:
-				print("Task Started")
 				return .publisher {
 					garments.fetch()
 						.receive(on: DispatchQueue.main)
@@ -114,7 +126,7 @@ struct GarmentListView: View {
                         }
                         .swipeActions {
                             Button {
-                                store.send(.delete(item.id), animation: .default)
+								store.send(.delete(item.id), animation: .default)
                             } label: {
                                 Label(
                                     title: { Text("Delete") },
@@ -167,7 +179,7 @@ struct GarmentListView: View {
 }
 
 #Preview {
-	previews = true
+	previewInMemory = true
 	try? ["Mini Skirt", "Jeans", "Trainers", "Pants", "Shorts", "Shirt", "Blouse"]
 		.forEach(GarmentCD.create)
 	return GarmentListView()

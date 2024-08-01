@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8420A7282C5ADA2700FC56C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8420A7272C5ADA2700FC56C5 /* GoogleService-Info.plist */; };
+		8420A72B2C5AE0E900FC56C5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8420A72A2C5AE0E900FC56C5 /* FirebaseCrashlytics */; };
+		8420A72E2C5B582600FC56C5 /* AddGarmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420A72D2C5B582600FC56C5 /* AddGarmentTests.swift */; };
 		844D31D22C55895A0038D8EA /* GarmentCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D12C55895A0038D8EA /* GarmentCoreData.swift */; };
-		844D31D52C594CBF0038D8EA /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D42C594CBF0038D8EA /* Dependencies.swift */; };
+		844D31D52C594CBF0038D8EA /* GarmentsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D42C594CBF0038D8EA /* GarmentsDependency.swift */; };
 		84685E692C50944B003475D9 /* luluListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E682C50944B003475D9 /* luluListApp.swift */; };
 		84685E6B2C50944B003475D9 /* GarmentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E6A2C50944B003475D9 /* GarmentListView.swift */; };
 		84685E6D2C50944D003475D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84685E6C2C50944D003475D9 /* Assets.xcassets */; };
 		84685E702C50944D003475D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84685E6F2C50944D003475D9 /* Preview Assets.xcassets */; };
 		84685E722C50944D003475D9 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E712C50944D003475D9 /* CoreData.swift */; };
 		84685E752C50944D003475D9 /* luluList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84685E732C50944D003475D9 /* luluList.xcdatamodeld */; };
-		84685E7F2C50944D003475D9 /* luluListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E7E2C50944D003475D9 /* luluListTests.swift */; };
+		84685E7F2C50944D003475D9 /* GarmentListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E7E2C50944D003475D9 /* GarmentListTests.swift */; };
 		84685E892C50944D003475D9 /* luluListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E882C50944D003475D9 /* luluListUITests.swift */; };
 		84685E8B2C50944D003475D9 /* luluListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E8A2C50944D003475D9 /* luluListUITestsLaunchTests.swift */; };
 		84685E992C50952B003475D9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 84685E982C50952B003475D9 /* ComposableArchitecture */; };
@@ -43,9 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8420A7272C5ADA2700FC56C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8420A72D2C5B582600FC56C5 /* AddGarmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentTests.swift; sourceTree = "<group>"; };
 		844D31D12C55895A0038D8EA /* GarmentCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentCoreData.swift; sourceTree = "<group>"; };
 		844D31D32C5617920038D8EA /* luluList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = luluList.xctestplan; sourceTree = "<group>"; };
-		844D31D42C594CBF0038D8EA /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		844D31D42C594CBF0038D8EA /* GarmentsDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentsDependency.swift; sourceTree = "<group>"; };
 		84685E652C50944B003475D9 /* llList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = llList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84685E682C50944B003475D9 /* luluListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListApp.swift; sourceTree = "<group>"; };
 		84685E6A2C50944B003475D9 /* GarmentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentListView.swift; sourceTree = "<group>"; };
@@ -54,7 +59,7 @@
 		84685E712C50944D003475D9 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		84685E742C50944D003475D9 /* luluList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = luluList.xcdatamodel; sourceTree = "<group>"; };
 		84685E7A2C50944D003475D9 /* luluListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = luluListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		84685E7E2C50944D003475D9 /* luluListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListTests.swift; sourceTree = "<group>"; };
+		84685E7E2C50944D003475D9 /* GarmentListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentListTests.swift; sourceTree = "<group>"; };
 		84685E842C50944D003475D9 /* luluListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = luluListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84685E882C50944D003475D9 /* luluListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListUITests.swift; sourceTree = "<group>"; };
 		84685E8A2C50944D003475D9 /* luluListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = luluListUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -70,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84685E992C50952B003475D9 /* ComposableArchitecture in Frameworks */,
+				8420A72B2C5AE0E900FC56C5 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +96,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8420A7262C5ADA0E00FC56C5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		844D31CE2C5358390038D8EA /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				84685E9A2C51F4F0003475D9 /* Garment.swift */,
 				844D31D12C55895A0038D8EA /* GarmentCoreData.swift */,
-				844D31D42C594CBF0038D8EA /* Dependencies.swift */,
+				844D31D42C594CBF0038D8EA /* GarmentsDependency.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,6 +155,8 @@
 		84685E672C50944B003475D9 /* luluList */ = {
 			isa = PBXGroup;
 			children = (
+				8420A7272C5ADA2700FC56C5 /* GoogleService-Info.plist */,
+				8420A7262C5ADA0E00FC56C5 /* App */,
 				84685E682C50944B003475D9 /* luluListApp.swift */,
 				84685E9C2C51F707003475D9 /* Environment.swift */,
 				844D31CF2C53584B0038D8EA /* Views */,
@@ -165,7 +180,8 @@
 		84685E7D2C50944D003475D9 /* luluListTests */ = {
 			isa = PBXGroup;
 			children = (
-				84685E7E2C50944D003475D9 /* luluListTests.swift */,
+				84685E7E2C50944D003475D9 /* GarmentListTests.swift */,
+				8420A72D2C5B582600FC56C5 /* AddGarmentTests.swift */,
 			);
 			path = luluListTests;
 			sourceTree = "<group>";
@@ -189,6 +205,7 @@
 				84685E612C50944B003475D9 /* Sources */,
 				84685E622C50944B003475D9 /* Frameworks */,
 				84685E632C50944B003475D9 /* Resources */,
+				8420A72C2C5B14B800FC56C5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -197,6 +214,7 @@
 			name = llList;
 			packageProductDependencies = (
 				84685E982C50952B003475D9 /* ComposableArchitecture */,
+				8420A72A2C5AE0E900FC56C5 /* FirebaseCrashlytics */,
 			);
 			productName = luluList;
 			productReference = 84685E652C50944B003475D9 /* llList.app */;
@@ -272,6 +290,7 @@
 			mainGroup = 84685E5C2C50944B003475D9;
 			packageReferences = (
 				84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				8420A7292C5AE0E900FC56C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 84685E662C50944B003475D9 /* Products */;
 			projectDirPath = "";
@@ -291,6 +310,7 @@
 			files = (
 				84685E702C50944D003475D9 /* Preview Assets.xcassets in Resources */,
 				84685E6D2C50944D003475D9 /* Assets.xcassets in Resources */,
+				8420A7282C5ADA2700FC56C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +330,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8420A72C2C5B14B800FC56C5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84685E612C50944B003475D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,7 +368,7 @@
 				844D31D22C55895A0038D8EA /* GarmentCoreData.swift in Sources */,
 				84685E692C50944B003475D9 /* luluListApp.swift in Sources */,
 				84685E752C50944D003475D9 /* luluList.xcdatamodeld in Sources */,
-				844D31D52C594CBF0038D8EA /* Dependencies.swift in Sources */,
+				844D31D52C594CBF0038D8EA /* GarmentsDependency.swift in Sources */,
 				84685EA12C521A8E003475D9 /* FetchPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,7 +377,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84685E7F2C50944D003475D9 /* luluListTests.swift in Sources */,
+				84685E7F2C50944D003475D9 /* GarmentListTests.swift in Sources */,
+				8420A72E2C5B582600FC56C5 /* AddGarmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +441,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -660,6 +706,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8420A7292C5AE0E900FC56C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
 		84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -671,6 +725,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8420A72A2C5AE0E900FC56C5 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8420A7292C5AE0E900FC56C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		84685E982C50952B003475D9 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

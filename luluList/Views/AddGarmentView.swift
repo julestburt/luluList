@@ -3,14 +3,28 @@ import ComposableArchitecture
 
 @Reducer
 struct AddGarment {
+	
+	@Reducer(state: .equatable)
+	public enum Destination {
+		case alert(AlertState<Alert>)
+		
+		public enum Alert {
+			case createFail
+		}
+	}
+	
     @ObservableState
     struct State: Equatable {
+		@Presents public var destination: Destination.State?
         var name: String
     }
-    enum Action: BindableAction {
-        case binding(BindingAction<State>)
-        case save
+	
+	enum Action: BindableAction {
+		case destination(PresentationAction<Destination.Action>)
+		case binding(BindingAction<State>)
+        case create
         case dismiss
+		case createError
     }
     
     @Dependency(\.dismiss) var dismiss
@@ -20,22 +34,26 @@ struct AddGarment {
         BindingReducer()
         Reduce<State, Action> { state, action in
             switch action {
-            case .save:
-                return .run { [name = state.name] send in
-                    do {
-                        try garments.create(name)
-                        await send(.dismiss)
-                    } catch {
-                        // TODO: Present an alert
-                        fatalError("Failed to create new GarmentCD")
-                    }
-                }
             case .dismiss:
                 return .run { _ in await self.dismiss() }
-            case .binding:
+			case .create:
+				return .run { [name = state.name] send in
+					do {
+						try garments.create(name)
+						await send(.dismiss)
+					} catch {
+						await send(.createError)
+					}
+				}
+			case .createError:
+				state.destination = .alert(.init(title: TextState("Nothing to Save"), message: state.name.isEmpty ? TextState(verbatim: "Enter a name!") : nil, buttons: [.default(TextState("OK"))]))
+				return .none
+				
+			case .binding, .destination:
                 return .none
             }
         }
+		.ifLet(\.$destination, action: \.destination)
     }
 }
 
@@ -53,7 +71,7 @@ struct AddGarmentView: View {
                 }
 				.font(.largeTitle)
                 .keyboardShortcut(.defaultAction)
-                .onSubmit { store.send(.save) }
+                .onSubmit { store.send(.create) }
                 .focused($focusedField, equals: .itemName)
                 .padding(.horizontal, 16)
                 Spacer()
@@ -72,7 +90,7 @@ struct AddGarmentView: View {
                                 
                 ToolbarItem(placement: .primaryAction) {
                     Button{
-                        store.send(.save)
+                        store.send(.create)
                     } label: {
                         Text("Save")
                     }
@@ -82,11 +100,13 @@ struct AddGarmentView: View {
         .onAppear {
             focusedField = .itemName
         }
+		.alert($store.scope(state: \.destination?.alert, action: \.destination.alert))
     }
 }
 
 #Preview {
-	AddGarmentView(store: Store(initialState: AddGarment.State(name: ""), reducer: {
+	previewInMemory = true
+	return AddGarmentView(store: Store(initialState: AddGarment.State(name: ""), reducer: {
 		AddGarment()
 	}))
 }

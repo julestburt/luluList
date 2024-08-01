@@ -13,14 +13,6 @@ extension GarmentCD {
 		return Garment(id, name: name, created: created)
 	}
 	
-//	static func garment(_ garmentCD: GarmentCD) -> Garment? {
-//		guard let id = garmentCD.id,
-//			  let name = garmentCD.name,
-//			  let created = garmentCD.created else { return nil }
-//		return Garment(id, name: name, created: created)
-//
-//	}
-	
 	static var fetch: NSFetchRequest<GarmentCD> {
 		let request = GarmentCD.fetchRequest()
 		request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: false)]

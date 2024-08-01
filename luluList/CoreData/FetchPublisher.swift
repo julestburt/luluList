@@ -4,6 +4,7 @@ import Combine
 import UIKit
 
 class FetchPublisher<A, B>: NSObject, NSFetchedResultsControllerDelegate, ObservableObject where A: NSFetchRequestResult {
+	
     let publisherPassThrough: PassthroughSubject<[A], Error>
     var controller: NSFetchedResultsController<A>!
 	var testMode: Bool

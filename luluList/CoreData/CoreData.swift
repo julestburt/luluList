@@ -26,12 +26,6 @@ struct CoreData {
         _backgroundContext = container.newBackgroundContext()
     }
         
-    static var preview: CoreData {
-        let result = CoreData(inMemory: true)
-        let viewContext = result.container.viewContext
-        return result
-    }
-    
     private func saveMain() {
         self.trySave(_mainContext)
     }
