@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8410C1AF2CAC84DB00BF18D8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8420A7272C5ADA2700FC56C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8420A72D2C5B582600FC56C5 /* AddGarmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGarmentTests.swift; sourceTree = "<group>"; };
 		844D31D12C55895A0038D8EA /* GarmentCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarmentCoreData.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 		84685E5C2C50944B003475D9 = {
 			isa = PBXGroup;
 			children = (
+				8410C1AF2CAC84DB00BF18D8 /* README.md */,
 				844D31D32C5617920038D8EA /* luluList.xctestplan */,
 				84685E672C50944B003475D9 /* luluList */,
 				84685E7D2C50944D003475D9 /* luluListTests */,
@@ -333,6 +335,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		8420A72C2C5B14B800FC56C5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

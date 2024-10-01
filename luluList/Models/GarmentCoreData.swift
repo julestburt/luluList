@@ -22,7 +22,6 @@ extension GarmentCD {
 
 extension GarmentCD {
 	static func create(_ name: String) throws {
-		print(name)
 		let newItem = GarmentCD(context: Current.coreData.context)
 		newItem.id = UUID()
 		newItem.created = Current.date()

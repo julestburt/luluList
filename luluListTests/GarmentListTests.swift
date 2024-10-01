@@ -68,6 +68,7 @@ final class GarmentListTests: XCTestCase {
 			GarmentList()
 		} withDependencies: {
 			$0.garments.fetch = { Just(self.testGarments).eraseToAnyPublisher() }
+			$0.garments.delete = { uuid in }
 		}
 		
 		XCTAssert(store.state.items.count == 0, "Items count not zero")

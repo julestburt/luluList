@@ -2,7 +2,7 @@ import UIKit
 import Combine
 
 var previewInMemory = false
-let coredata = CoreData(inMemory: previewInMemory)
+private let coredata = CoreData(inMemory: previewInMemory)
 
 var Current = Environment(
 	date: { Date() },
