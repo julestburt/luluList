@@ -59,6 +59,7 @@ struct AddGarment {
 
 struct AddGarmentView: View {
     @Bindable var store: Store<AddGarment.State, AddGarment.Action>
+	
     enum FocusField { case itemName }
     @FocusState private var focusedField: FocusField?
     
@@ -96,7 +97,7 @@ struct AddGarmentView: View {
                     }
                 }
             }
-        }        
+        }
         .onAppear {
             focusedField = .itemName
         }

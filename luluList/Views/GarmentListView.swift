@@ -7,17 +7,21 @@ import Combine
 struct GarmentList {
     @ObservableState
     struct State: Equatable {
-        
 		var items: IdentifiedArrayOf<Garment> = []
-        enum sort: String {
-            case alpha = "Alpha"
-            case date = "Date Created" }
-        var sortedItems: [Garment] {  self.items.sorted(by: { first, second in
-            selection == .alpha
-            ? first.name < second.name
-            : first.created > second.created
-        }) }
-        var selection: sort = .alpha
+		var selection: SortMethod = .alpha
+
+		enum SortMethod: String {
+			case alpha = "Alpha"
+			case date = "Date Created"
+		}
+		var sortedItems: [Garment] {
+			self.items.sorted(by: { first, second in
+				switch selection {
+				case .alpha: first.name < second.name
+				case .date: first.created > second.created
+				}
+			})
+		}
         
         @Presents public var destination: Destination.State?
         var cancellable: AnyCancellable?
@@ -100,7 +104,6 @@ struct GarmentList {
                 return .none
                 
             case .destination, .binding:
-                // Catch-all
                 return .none
             }
         }
@@ -167,11 +170,11 @@ struct GarmentListView: View {
     }
 
     struct SegmentedControlView: View {
-        @Binding var selection: GarmentList.State.sort
+        @Binding var selection: GarmentList.State.SortMethod
         var body: some View {
             Picker("Selection", selection: $selection) {
-                Text(GarmentList.State.sort.alpha.rawValue).tag(GarmentList.State.sort.alpha)
-                Text(GarmentList.State.sort.date.rawValue).tag(GarmentList.State.sort.date)
+                Text(GarmentList.State.SortMethod.alpha.rawValue).tag(GarmentList.State.SortMethod.alpha)
+                Text(GarmentList.State.SortMethod.date.rawValue).tag(GarmentList.State.SortMethod.date)
             }
             .pickerStyle(.segmented)
         }
@@ -180,7 +183,6 @@ struct GarmentListView: View {
 
 #Preview {
 	previewInMemory = true
-	try? ["Mini Skirt", "Jeans", "Trainers", "Pants", "Shorts", "Shirt", "Blouse"]
-		.forEach(GarmentCD.create)
+	try? GarmentCD.createSamples()
 	return GarmentListView()
 }

@@ -47,13 +47,13 @@ extension Garments: DependencyKey {
 		}
 	)
 	
-	static var previewValue = Garments(
-		fetch: { Just([Garment(name:"Test Item")]).eraseToAnyPublisher() },
-		start: {},
-		delete: { _ in },
-		create: { _ in },
-		eraseAll: {}
-	)
+//	static var previewValue = Garments(
+//		fetch: { Just([Garment(name:"Test Item")]).eraseToAnyPublisher() },
+//		start: {},
+//		delete: { _ in },
+//		create: { _ in },
+//		eraseAll: {}
+//	)
 	
 //	static var testValue = Garments(
 //		fetch: { Just([Garment.testGarment]).eraseToAnyPublisher() },

@@ -17,11 +17,11 @@ struct CoreData {
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
+		container.loadPersistentStores { (storeDescription, error) in
+			if let error = error as NSError? {
+				fatalError("Unresolved error \(error), \(error.userInfo)")
+			}
+		}
         container.viewContext.automaticallyMergesChangesFromParent = true
         _backgroundContext = container.newBackgroundContext()
     }
@@ -33,8 +33,8 @@ struct CoreData {
     func save(_ context: NSManagedObjectContext? = nil) {
         let context = context ?? container.viewContext
         guard context !== container.viewContext else {
-            saveMain()
-            return
+            return saveMain()
+            
         }
         trySave(context)
     }

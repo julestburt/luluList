@@ -21,28 +21,19 @@ extension GarmentCD {
 }
 
 extension GarmentCD {
-	
 	static func create(_ name: String) throws {
+		print(name)
 		let newItem = GarmentCD(context: Current.coreData.context)
 		newItem.id = UUID()
 		newItem.created = Current.date()
 		newItem.name = name
 		try? Current.coreData.context.save()
 	}
-	
-	static func reviews(_ viewContext: NSManagedObjectContext) {
-		["Mini Skirt", "Jeans", "Trainers", "Pants", "Shorts", "Shirt", "Blouse"]
-			.forEach {
-				let newItem = GarmentCD(context: viewContext)
-				newItem.id = UUID()
-				newItem.created = Current.date()
-				newItem.name = $0
-				do {
-					try viewContext.save()
-				} catch {
-					let nsError = error as NSError
-					fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-				}
-			}
+}
+
+extension GarmentCD {
+	static func createSamples() throws {
+		try? ["Mini Skirt", "Jeans", "Trainers", "Pants", "Shorts", "Shirt", "Blouse"]
+			.forEach(create)
 	}
 }

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8410C1AB2CAC6DF500BF18D8 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8410C1AA2CAC6DF500BF18D8 /* ComposableArchitecture */; };
+		8410C1AE2CAC6E5300BF18D8 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8410C1AD2CAC6E5300BF18D8 /* FirebaseCrashlytics */; };
 		8420A7282C5ADA2700FC56C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8420A7272C5ADA2700FC56C5 /* GoogleService-Info.plist */; };
-		8420A72B2C5AE0E900FC56C5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8420A72A2C5AE0E900FC56C5 /* FirebaseCrashlytics */; };
 		8420A72E2C5B582600FC56C5 /* AddGarmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420A72D2C5B582600FC56C5 /* AddGarmentTests.swift */; };
 		844D31D22C55895A0038D8EA /* GarmentCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D12C55895A0038D8EA /* GarmentCoreData.swift */; };
 		844D31D52C594CBF0038D8EA /* GarmentsDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D31D42C594CBF0038D8EA /* GarmentsDependency.swift */; };
@@ -21,7 +22,6 @@
 		84685E7F2C50944D003475D9 /* GarmentListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E7E2C50944D003475D9 /* GarmentListTests.swift */; };
 		84685E892C50944D003475D9 /* luluListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E882C50944D003475D9 /* luluListUITests.swift */; };
 		84685E8B2C50944D003475D9 /* luluListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E8A2C50944D003475D9 /* luluListUITestsLaunchTests.swift */; };
-		84685E992C50952B003475D9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 84685E982C50952B003475D9 /* ComposableArchitecture */; };
 		84685E9B2C51F4F0003475D9 /* Garment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E9A2C51F4F0003475D9 /* Garment.swift */; };
 		84685E9D2C51F707003475D9 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E9C2C51F707003475D9 /* Environment.swift */; };
 		84685E9F2C520B91003475D9 /* AddGarmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685E9E2C520B91003475D9 /* AddGarmentView.swift */; };
@@ -74,8 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84685E992C50952B003475D9 /* ComposableArchitecture in Frameworks */,
-				8420A72B2C5AE0E900FC56C5 /* FirebaseCrashlytics in Frameworks */,
+				8410C1AB2CAC6DF500BF18D8 /* ComposableArchitecture in Frameworks */,
+				8410C1AE2CAC6E5300BF18D8 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,8 +213,8 @@
 			);
 			name = llList;
 			packageProductDependencies = (
-				84685E982C50952B003475D9 /* ComposableArchitecture */,
-				8420A72A2C5AE0E900FC56C5 /* FirebaseCrashlytics */,
+				8410C1AA2CAC6DF500BF18D8 /* ComposableArchitecture */,
+				8410C1AD2CAC6E5300BF18D8 /* FirebaseCrashlytics */,
 			);
 			productName = luluList;
 			productReference = 84685E652C50944B003475D9 /* llList.app */;
@@ -264,7 +264,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					84685E642C50944B003475D9 = {
 						CreatedOnToolsVersion = 15.4;
@@ -289,8 +289,8 @@
 			);
 			mainGroup = 84685E5C2C50944B003475D9;
 			packageReferences = (
-				84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
-				8420A7292C5AE0E900FC56C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8410C1A92CAC6DF500BF18D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				8410C1AC2CAC6E5300BF18D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 84685E662C50944B003475D9 /* Products */;
 			projectDirPath = "";
@@ -542,7 +542,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -572,7 +572,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,7 +589,6 @@
 		84685E922C50944D003475D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -609,7 +608,6 @@
 		84685E932C50944D003475D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -629,7 +627,6 @@
 		84685E952C50944D003475D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU9YSQ22FQ;
@@ -648,7 +645,6 @@
 		84685E962C50944D003475D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZU9YSQ22FQ;
@@ -706,34 +702,34 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8420A7292C5AE0E900FC56C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.0.0;
-			};
-		};
-		84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		8410C1A92CAC6DF500BF18D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.12.0;
+				minimumVersion = 1.15.0;
+			};
+		};
+		8410C1AC2CAC6E5300BF18D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.3.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8420A72A2C5AE0E900FC56C5 /* FirebaseCrashlytics */ = {
+		8410C1AA2CAC6DF500BF18D8 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8420A7292C5AE0E900FC56C5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		84685E982C50952B003475D9 /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 84685E972C50952B003475D9 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = 8410C1A92CAC6DF500BF18D8 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		8410C1AD2CAC6E5300BF18D8 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8410C1AC2CAC6E5300BF18D8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 
